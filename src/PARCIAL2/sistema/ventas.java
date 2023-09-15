@@ -686,7 +686,7 @@ txtbuscarproducto.setText("");
    String ra="Hola Mundo";
     
    Encabezado.addCell("");
-   Encabezado.addCell("Ruc :"+nit+"\nNombre: "+nom+"\nTelefono: "+tel+"\nDireccion: "+dir+"\nRazon: "+ra);
+   Encabezado.addCell("Nit :"+nit+"\nNombre: "+nom+"\nTelefono: "+tel+"\nDireccion: "+dir+"\nRazon: "+ra);
    Encabezado.addCell(fecha);
    doc.add(Encabezado);
     

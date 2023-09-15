@@ -233,7 +233,7 @@ public class productos extends javax.swing.JInternalFrame {
 
         jButton1.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/PARCIAL2/iconos/archieve_storage_files_documents_folder_icon_256481.png"))); // NOI18N
-        jButton1.setText("Exportar a Excel . XMLS");
+        jButton1.setText("Exportar .PDF");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -410,7 +410,7 @@ public class productos extends javax.swing.JInternalFrame {
    String ra="Hola Mundo";
     
    Encabezado.addCell("");
-   Encabezado.addCell("Ruc :"+nit+"\nNombre: "+nom+"\nTelefono: "+tel+"\nDireccion: "+dir+"\nRazon: "+ra);
+   Encabezado.addCell("Nit :"+nit+"\nNombre: "+nom+"\nTelefono: "+tel+"\nDireccion: "+dir+"\nRazon: "+ra);
    Encabezado.addCell(fecha);
    doc.add(Encabezado);
     
