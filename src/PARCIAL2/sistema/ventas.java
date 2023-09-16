@@ -503,12 +503,25 @@ public class ventas extends javax.swing.JInternalFrame {
         if (filaSeleccionada != -1) {
             // Obtener el modelo de la tabla
             DefaultTableModel modelo = (DefaultTableModel) tablaventa.getModel();
-
+                
+             double cancelarventa=Double.valueOf(tablaventa.getValueAt(tablaventa.getSelectedRow(), 3).toString());
+            System.out.println(cancelarventa);
+            
+            
             // Eliminar la fila seleccionada del modelo de la tabla
             modelo.removeRow(filaSeleccionada);
 
             // Notificar al modelo que se realizaron cambios en los datos
             modelo.fireTableDataChanged();
+            
+          totalproductos=totalproductos-cancelarventa;
+          txttotal.setText(String.valueOf(totalproductos));
+            
+            
+          
+          
+            
+            
         } else {
             // Mostrar un mensaje de error si no se seleccionó ninguna fila
             JOptionPane.showMessageDialog(this, "Por favor, selecciona una fila para eliminar.",
