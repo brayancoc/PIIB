@@ -362,19 +362,18 @@ public class productos extends javax.swing.JInternalFrame {
     }//GEN-LAST:event_agregarActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       /* ExportarExcel obj;
-        try{
-            obj=new ExportarExcel();
-            obj.exportarExcel(Tabla);
-        }catch(Exception e){
-            System.out.println("Error: "+e);
-
-        }*/
-       
-      //prueba pdf
+     
+     //colocar datos al pdf facturas
+     
+    String fechareporte = DateTimeFormatter.ofPattern("MMM-dd-yyyy")
+     
+                    .format(LocalDateTime.now()); 
+    String datos=fechareporte+".pdf";
+    //--------------  
+     
       try{
     FileOutputStream archivo;
-    File file= new File("src/pdf/Productos.pdf");
+    File file= new File("C:\\Users\\braya\\Documents\\NetBeansProjects\\PIIB\\build\\classes\\pdf\\Inventarios\\"+datos);
     archivo= new FileOutputStream(file);
     Document doc = new Document();
     PdfWriter.getInstance(doc, archivo);
