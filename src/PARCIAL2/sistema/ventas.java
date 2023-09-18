@@ -663,7 +663,14 @@ txtbuscarproducto.setText("");
      void pdf() {
          try{
     FileOutputStream archivo;
-    File file= new File("src/pdf/Ventas.pdf");
+   //colocar datos al pdf factura
+     
+    String cliente=txtnombrecajero.getText();
+    String cajero=txtnombrecli.getText();
+    
+    String datos=cliente+cajero+".pdf";
+    //--------------
+    File file= new File("C:\\Users\\braya\\Documents\\NetBeansProjects\\PIIB\\build\\classes\\pdf\\Ventas\\"+datos);
     archivo= new FileOutputStream(file);
     Document doc = new Document();
     PdfWriter.getInstance(doc, archivo);
