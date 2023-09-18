@@ -663,7 +663,7 @@ txtbuscarproducto.setText("");
      void pdf() {
          try{
     FileOutputStream archivo;
-   //colocar datos al pdf factura
+   //colocar datos al pdf facturas
      
     String cliente=txtnombrecajero.getText();
     String cajero=txtnombrecli.getText();
